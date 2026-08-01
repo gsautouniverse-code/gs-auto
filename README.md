@@ -1,0 +1,2 @@
+# gs-auto
+ssass

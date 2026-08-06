@@ -503,14 +503,19 @@ a:focus-visible, button:focus-visible, input:focus-visible{
 .wa-badge{font-family:var(--font-geo); font-size:10px; font-weight:600; color:#25D366; background:rgba(37,211,102,0.12); padding:2px 8px; border-radius:100px;}
 
 .contact-map{
-  border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--hairline); min-height:340px;
+  position:relative; width:100%; height:350px;
+  border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--hairline);
   filter:grayscale(0.3) contrast(1.1);
-  position:relative;
+  margin-top:0;
 }
-.contact-map iframe{width:100%; height:100%; min-height:340px; border:0; display:block;}
+.contact-map iframe{width:100%; height:100%; border:0; display:block;}
 .contact-map-link{
-  position:absolute; inset:0; z-index:2; display:flex; align-items:flex-end; justify-content:flex-end;
-  padding:14px;
+  position:absolute; bottom:15px; right:15px; z-index:2;
+  display:flex; align-items:center; justify-content:flex-end;
+  padding:0;
+}
+@media (max-width:560px){
+  .contact-map{height:260px;}
 }
 .contact-map-link span{
   display:flex; align-items:center; gap:7px;
@@ -816,13 +821,13 @@ a:focus-visible, button:focus-visible, input:focus-visible{
 
     <div class="contact-grid">
       <div class="contact-cards">
-        <a class="contact-card" href="https://www.google.com/maps?q=Merab+Kostava+1,+Tbilisi&output=embed" target="_blank" rel="noopener">
+        <a class="contact-card" href="https://maps.app.goo.gl/g5HxgVd62asKzdK28" target="_blank" rel="noopener">
           <div class="contact-icon">
             <svg viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 19 14.5 19 9.5C19 5.9 15.9 3 12 3C8.1 3 5 5.9 5 9.5C5 14.5 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
           </div>
           <div>
             <h3>მისამართი</h3>
-            <p>სტალინის ქუჩა N26</p>
+            <p>მ. კოსტავას ქ. N1, გორი</p>
           </div>
         </a>
 
@@ -869,11 +874,15 @@ a:focus-visible, button:focus-visible, input:focus-visible{
 
       <div class="contact-map">
         <iframe
-          src="https://www.google.com/maps?q=Merab+Kostava+1,+Tbilisi,+Georgia&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.1352467540216!2d44.10834317654162!3d41.98409097123547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404472c1c686105f%3A0x6b149b14c38d38e2!2sAuto%20Universe%20G.S!5e0!3m2!1sen!2sge!4v1717600000000!5m2!1sen!2sge"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           title="Auto Universe G.S. — რუკაზე მდებარეობა"></iframe>
-        <a class="contact-map-link" href="https://maps.app.goo.gl/kywLY7VGUfRvtYng6?g_st=ic" target="_blank" rel="noopener" aria-label="გახსენი Auto Universe G.S. Google Maps-ზე">
+        <a class="contact-map-link" href="https://maps.app.goo.gl/g5HxgVd62asKzdK28" target="_blank" rel="noopener" aria-label="გახსენი Auto Universe G.S. Google Maps-ზე">
           <span>
             <svg viewBox="0 0 24 24" fill="none"><path d="M12 21C12 21 19 14.5 19 9.5C19 5.9 15.9 3 12 3C8.1 3 5 5.9 5 9.5C5 14.5 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
             Google Maps-ზე ნახვა
@@ -907,7 +916,7 @@ a:focus-visible, button:focus-visible, input:focus-visible{
       </div>
       <div class="footer-col">
         <h4>კონტაქტი</h4>
-        <a href="https://www.google.com/maps?q=Merab+Kostava+1,+Tbilisi&output=embed" target="_blank" rel="noopener">სტალინის ქუჩა N26</a>
+        <a href="https://maps.app.goo.gl/g5HxgVd62asKzdK28" target="_blank" rel="noopener">მ. კოსტავას ქ. N1, გორი</a>
         <a href="tel:+995511202016">+995 511 20 20 16</a>
         <a href="tel:+995596101006">+995 596 10 10 06</a>
         <a href="mailto:gs.autouniverse@gmail.com">gs.autouniverse@gmail.com</a>
